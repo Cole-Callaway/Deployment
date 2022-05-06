@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const port = 4000;
+const port = process.env.PORT || 4000;
 const app = express();
 
 const { decode, encrypt } = require("./controller");
@@ -9,6 +9,10 @@ const { decode, encrypt } = require("./controller");
 app.use(cors());
 
 app.use(express.json()); // When we want to be able to accept JSON.
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.post(`/api/Cipher/`, (req, res) => {
   const charTwo = req.body.char;
@@ -26,4 +30,4 @@ app.post(`/api/decode/`, (req, res) => {
   res.status(200).send(sent);
 });
 
-app.listen(port, () => console.log("Server running on 4000"));
+app.listen(port, () => console.log(`Server running on ${port}`));
