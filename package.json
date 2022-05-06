@@ -1,4 +1,8 @@
 {
+  "name": "Deployment-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "frontend.js",
   "scripts": {
     "start": "node /server/index.js"
   },
