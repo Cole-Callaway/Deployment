@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json()); // When we want to be able to accept JSON.
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 
 app.post(`/api/Cipher/`, (req, res) => {
