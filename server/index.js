@@ -1,12 +1,10 @@
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 const port = 4000;
 const app = express();
 
-const { login, register, decode, encrypt } = require("./controller");
-
-app.post(`/api/login`, login);
-app.post(`/api/register`, register);
+const { decode, encrypt } = require("./controller");
 
 app.use(cors());
 
