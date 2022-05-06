@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deployment</title>
+  </head>
+ 
+    <h1>Caesar Cipher</h1>
+    <form id="cipher">
+      <label>Plaintext:</label>
+      <textarea name="plaintext" id="encrypt"></textarea>
+      <label>Shift:</label>
+      <input type="number" name="shift" value="5" min="1" max="26" />
+      <input type="submit" value="encrypt" />
+    </form>
+
+    <h2>Output</h2>
+    <div id="output"></div>
+
+    <form id="reverse">
+      <label>Plaintext:</label>
+      <textarea name="plaintext" id="decrypt"></textarea>
+      <input type="submit" value="Decode" />
+    </form>
+
+    <h2>Decode</h2>
+    <div id="decode"></div>
+
+   
+
+    <section id="user-info"></section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="frontend.js"></script>
+  </body>
+</html>
